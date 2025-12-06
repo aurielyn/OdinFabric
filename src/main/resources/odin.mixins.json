@@ -1,36 +1,36 @@
 {
-    "required": true,
-    "minVersion": "0.8",
-    "package": "com.odtheking.mixin",
-    "compatibilityLevel": "JAVA_21",
-    "injectors": {
-        "defaultRequire": 1
-    },
-    "client": [
-        "accessors.AbstractContainerScreenAccessor",
-        "accessors.CompositeRenderTypeAccessor",
-        "accessors.KeyMappingAccessor",
-        "accessors.PictureInPictureRendererAccessor",
-        "mixins.AbstractContainerScreenMixin",
-        "mixins.BossBarHealthOverlayMixin",
-        "mixins.ChatListenerMixin",
-        "mixins.ChatScreenMixin",
-        "mixins.ClientPacketListenerMixin",
-        "mixins.EffectsInInventoryMixin",
-        "mixins.EntityRendererMixin",
-        "mixins.ExperienceBarRendererMixin",
-        "mixins.GuiMixin",
-        "mixins.KeyBindingMixin",
-        "mixins.MinecraftMixin",
-        "mixins.MouseHandlerMixin",
-        "mixins.PlayerRendererMixin",
-        "mixins.ScreenEffectRendererMixin"
-    ],
-    "mixins": [
-        "accessors.ServerboundInteractPacketAccessor",
-        "mixins.ConnectionMixin",
-        "mixins.EntityMixin",
-        "mixins.LevelChunkMixin",
-        "mixins.YggdrasilSignatureIgnoreMixin"
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.odtheking.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "accessors.AbstractContainerScreenAccessor",
+    "accessors.CompositeRenderTypeAccessor",
+    "accessors.KeyMappingAccessor",
+    "accessors.PictureInPictureRendererAccessor",
+    "mixins.AbstractContainerScreenMixin",
+    "mixins.BossBarHealthOverlayMixin",
+    "mixins.ChatListenerMixin",
+    "mixins.ChatScreenMixin",
+    "mixins.ClientPacketListenerMixin",
+    "mixins.EffectsInInventoryMixin",
+    "mixins.EntityRendererMixin",
+    "mixins.ExperienceBarRendererMixin",
+    "mixins.GuiMixin",
+    "mixins.KeyBindingMixin",
+    "mixins.MinecraftMixin",
+    "mixins.MouseHandlerMixin",
+    "mixins.PlayerRendererMixin",
+    "mixins.ScreenEffectRendererMixin"
+  ],
+  "mixins": [
+    "accessors.ServerboundInteractPacketAccessor",
+    "mixins.ConnectionMixin",
+    "mixins.EntityMixin",
+    "mixins.LevelChunkMixin",
+    "mixins.YggdrasilSignatureIgnoreMixin"
   ]
 }
