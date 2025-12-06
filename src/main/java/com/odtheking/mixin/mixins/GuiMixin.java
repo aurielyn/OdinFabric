@@ -1,8 +1,10 @@
 package com.odtheking.mixin.mixins;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
+import com.odtheking.odin.features.impl.render.RenderOptimizer;
 import com.odtheking.odin.features.impl.skyblock.OverlayType;
 import com.odtheking.odin.features.impl.skyblock.PlayerDisplay;
+import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.world.entity.player.Player;
@@ -13,6 +15,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(Gui.class)
 public class GuiMixin {
+    @Inject(method = "renderEffects", at = @At("HEAD"), cancellable = true)
+    private void odin$cancelRenderEffects(GuiGraphics context, DeltaTracker tickCounter, CallbackInfo ci) {
+        if (RenderOptimizer.getShouldHideStatusEffects()) ci.cancel();
+    }
 
     @Inject(method = "renderArmor", at = @At("HEAD"), cancellable = true)
     private static void cancelArmorBar(GuiGraphics guiGraphics, Player player, int i, int j, int k, int l, CallbackInfo ci) {
@@ -35,4 +41,3 @@ public class GuiMixin {
         return original;
     }
 }
-

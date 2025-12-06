@@ -18,7 +18,7 @@ object RenderOptimizer : Module(
     private val disableLighting by BooleanSetting("Hide Lighting", true, desc = "Hides lighting updates to improve performance.")
     private val disableExplosion by BooleanSetting("Hide Explosion Particles", false, desc = "Hides explosion particles to improve performance.")
     private val hideDyingMobs by BooleanSetting("Hide Dying Mobs", false, desc = "Hides mobs that are dying.")
-
+    private val hideStatusEffects by BooleanSetting("Hide Status Effects", false, desc = "Hides the status effects GUI both in inventory and the one always shown.")
     private val disableFireOverlay by BooleanSetting("Hide Fire Overlay", true, desc = "Hides the fire overlay to improve disability.")
 
     init {
@@ -46,4 +46,7 @@ object RenderOptimizer : Module(
 
     @JvmStatic
     val shouldDisableFire get() = enabled && disableFireOverlay
+
+    @JvmStatic
+    val shouldHideStatusEffects get() = enabled && hideStatusEffects
 }
